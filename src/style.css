@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top left, #190b0b, #060815, #190b0b);
+    color: #fff;
+    z-index: 9999;
+    transition: opacity 1s ease;
+    font-family: "Orbitron";
+}
+.loader_hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loaderback1 {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 20%;
+    left: 0;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback2 {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 10%;
+    right: 0;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback3 {
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    bottom: 0;
+    right: 25%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback4 {
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    top: 20%;
+    left: 25%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback5 {
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    top: 35%;
+    left: 55%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback7 {
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    top: 0%;
+    left: 0%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderback6 {
+    position: absolute;
+    width: 15%;
+    height: 30%;
+    top: 0%;
+    left: 60%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.loaderCard {
+    position: absolute;
+    color: #ff2c2171;
+    width: 30%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 0.4em;
+}
+.loaderCardright {
+    position: absolute;
+    color: #ff2c2171;
+    width: 30%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 0.4em;
+}
+.loaderCardbottom {
+    position: absolute;
+    color: #ff2c2171;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 0.5em;
+}
+.loaderCardmid1 {
+    position: absolute;
+    color: #ff2c2171;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 0.4em;
+}
+.loaderCardmid2 {
+    position: absolute;
+    color: #ff2c2171;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 0.3em;
+}
+.loaderCardtop {
+    position: absolute;
+    color: #ff2c2171;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    font-size: 0.3em;
+}
+.Mainwindow {
+    z-index: 999;
+    opacity: 1;
+}
+.loaderCard:not(.Mainwindow) {
+  opacity: 0;
+  animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCardright:not(.Mainwindow) {
+    opacity: 0;
+    animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCardbottom:not(.Mainwindow) {
+    opacity: 0;
+    animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCardmid1:not(.Mainwindow) {
+    opacity: 0;
+    animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCardmid2:not(.Mainwindow) {
+    opacity: 0;
+    animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCardtop:not(.Mainwindow) {
+    opacity: 0;
+    animation: popBehind 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.loaderCard:nth-child(1) { --i: 1; }
+.loaderCard:nth-child(2) { --i: 2; }
+.loaderCard:nth-child(3) { --i: 3; }
+.loaderCard:nth-child(4) { --i: 4; }
+.loaderCard:nth-child(5) { --i: 5; }
+.loaderCard:nth-child(6) { --i: 6; }
+.loaderCard:nth-child(7) { --i: 7; }
+.loaderCard:nth-child(8) { --i: 8; }
+.loaderCard:nth-child(9) { --i: 9; }
+
+.loaderCardright:nth-child(1) { --i: 1; }
+.loaderCardright:nth-child(2) { --i: 2; }
+.loaderCardright:nth-child(3) { --i: 3; }
+.loaderCardright:nth-child(4) { --i: 4; }
+.loaderCardright:nth-child(5) { --i: 5; }
+.loaderCardright:nth-child(6) { --i: 6; }
+.loaderCardright:nth-child(7) { --i: 7; }
+.loaderCardright:nth-child(8) { --i: 8; }
+.loaderCardright:nth-child(9) { --i: 9; }
+
+.loaderCardbottom:nth-child(1) { --i: 1; }
+.loaderCardbottom:nth-child(2) { --i: 2; }
+.loaderCardbottom:nth-child(3) { --i: 3; }
+.loaderCardbottom:nth-child(4) { --i: 4; }
+.loaderCardbottom:nth-child(5) { --i: 5; }
+.loaderCardbottom:nth-child(6) { --i: 6; }
+.loaderCardbottom:nth-child(7) { --i: 7; }
+.loaderCardbottom:nth-child(8) { --i: 8; }
+.loaderCardbottom:nth-child(9) { --i: 9; }
+
+.loaderCardmid1:nth-child(1) { --i: 1; }
+.loaderCardmid1:nth-child(2) { --i: 2; }
+.loaderCardmid1:nth-child(3) { --i: 3; }
+.loaderCardmid1:nth-child(4) { --i: 4; }
+.loaderCardmid1:nth-child(5) { --i: 5; }
+
+.loaderCardmid2:nth-child(1) { --i: 1; }
+.loaderCardmid2:nth-child(2) { --i: 2; }
+.loaderCardmid2:nth-child(3) { --i: 3; }
+.loaderCardmid2:nth-child(4) { --i: 4; }
+.loaderCardmid2:nth-child(5) { --i: 5; }
+
+.loaderCardtop:nth-child(1) { --i: 1; }
+.loaderCardtop:nth-child(2) { --i: 2; }
+.loaderCardtop:nth-child(3) { --i: 3; }
+.loaderCardtop:nth-child(4) { --i: 4; }
+.loaderCardtop:nth-child(5) { --i: 5; }
+
+.loaderCard:not(.Mainwindow) {
+  opacity: 0;
+  /* Shifts each card 30px right and 15px down based on its index */
+  transform: translate(calc(var(--i) * 60px), 0px) scale(calc(1 - (var(--i) * 0.07)));
+  
+  /* Staggers the arrival over your 5 second window */
+  animation-delay: calc(var(--i) * 0.5s);
+  
+  /* Sets stacking order so higher indexes sit on top of lower indexes */
+  z-index: var(--i);
+
+  /* 
+    OPACITY DECAY MATH:
+    Decreases opacity by 0.233 for each step.
+    Child 1 (--i: 1) -> 0.8
+    Child 2 (--i: 2) -> 0.56
+    Child 3 (--i: 3) -> 0.33
+    Child 4 (--i: 4) -> 0.10 (Your target minimum)
+  */
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+.loaderCardright:not(.Mainwindow) {
+  opacity: 0;
+  transform: translate(calc(var(--i) * -60px), 0px) scale(calc(1 - (var(--i) * 0.07)));
+  animation-delay: calc(var(--i) * 0.5s);
+  z-index: var(--i);
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+.loaderCardbottom:not(.Mainwindow) {
+  opacity: 0;
+  transform: translate(0px, calc(var(--i) * -30px)) scale(calc(1 - (var(--i) * 0.07)));
+  animation-delay: calc(var(--i) * 0.5s);
+  z-index: var(--i);
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+.loaderCardmid1:not(.Mainwindow) {
+  opacity: 0;
+  transform: translate(calc(var(--i) * 40px), calc(var(--i) * 15px)) scale(calc(1 - (var(--i) * 0.07)));
+  animation-delay: calc(var(--i) * 0.5s);
+  z-index: var(--i);
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+.loaderCardmid2:not(.Mainwindow) {
+  opacity: 0;
+  transform: translate(calc(var(--i) * -40px), calc(var(--i) * 15px)) scale(calc(1 - (var(--i) * 0.07)));
+  animation-delay: calc(var(--i) * 0.5s);
+  z-index: var(--i);
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+.loaderCardtop:not(.Mainwindow) {
+  opacity: 0;
+  transform: translate(calc(var(--i) * -40px), calc(var(--i) * 30px)) scale(calc(1 - (var(--i) * 0.07)));
+  animation-delay: calc(var(--i) * 1s);
+  z-index: var(--i);
+  --target-opacity: calc(1 - (var(--i) * 0.1));
+}
+
+/* Animation keyframe to pop the windows into view */
+@keyframes popBehind {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: var(--target-opacity);
+  }
+}
+
+.loaderModal {
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 4/3;
+    top: 30%;
+    left: 40%;
+    border: 2px solid #ff6259;
+    background-color: #ff362b38;
+    box-shadow: 0 0 5px 1px #ff6259;
+}
+.loaderModalHeader {
+    width: 100%;
+    height: 5%;
+    background-color: #ff6259;
+}
+.loaderModalText {
+    width: 100%;
+    height: 70%;
+    /* background-color: #ff362b38; */
+    color: #ff6259;
+    font-family: "Oxanium";
+    font-size: 0.7em;
+}
+.loaderProgress {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.progress-bar-bg {
+  width: 80%;
+  height: 8px;
+  background-color: #ff362b38;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.progress-bar-fill {
+  width: 0%; /* Starts at 0 */
+  height: 100%;
+  background-color: #ff6259;
+  transition: width 0.3s ease; /* Smooth steps */
+}
+.loaderProgress span {
+    color: #ff6259;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #060815;
+    overflow: hidden;
+}
+/* .app::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: url(./me_back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1;
+} */
+
+.back1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -50%, #ff000070, transparent);
+    animation: pulse 8s infinite;
+    z-index: 2;
+    pointer-events: none;
+}
+@keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+.back2 {
+    position: fixed;
+    background: #0f0707;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.backencodes {
+    float: left;
+    width: 100%;
+    height: 25%;
+    color: #ff6259;
+    line-height: 2em;
+    font-size: 0.4em;
+    font-family: "Orbitron";
+    opacity: 0.2;
+}
+
+.homeBut {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: #ff6259;
+    font-family: "Oxanium";
+    text-underline-offset: 4px;
+    z-index: 5;
+}
+
+.threeD_container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 80%;
+    z-index: 3;
+    /* perspective: 1000px; */
+    display: flex;
+    justify-content: center;
+}
+.floor {
+    position: absolute;
+    background: #8d241e57;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    /* transform-style: preserve-3d; */
+    /* transform: rotateX(45deg); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 20% 0, 21% 1%, 41% 1%, 42% 0, 60% 0, 61% 1%, 81% 1%, 82% 0, 100% 0, 100% 100%, 80% 100%, 79% 99%, 29% 99%, 28% 100%, 18% 100%, 17% 99%, 10% 99%, 9% 100%, 0 100%);
+}
+.galleryBox {
+    position: relative;
+    width: 100%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border-top: 2px solid #c7383179;
+    border-bottom: 2px solid #c7383179;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%,  rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%,  rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+}
+.galleryGrid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 2%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.galleryGrid::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.galleryItem {
+    flex: 0 0 auto;
+    width: 30%;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.galleryScrollbar {
+    position: relative;
+    flex: 0 0 auto;
+    width: 90%;
+    height: 2px;
+    margin: 12px auto 8px;
+    background: #ff62591f;
+    border-radius: 1px;
+}
+.galleryScrollThumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: #ff6259;
+    border-radius: 1px;
+    cursor: grab;
+    transition: background 0.2s ease;
+}
+.galleryScrollThumb:hover,
+.galleryScrollThumb.dragging {
+    background: #ffb1ac;
+}
+.galleryScrollThumb.dragging {
+    cursor: grabbing;
+}
+.galleryItem img {
+    width: 100%;
+}
+
+.galItem1 {
+    width: 60%;
+}
+.galItem2 {
+    width: 16%;
+}
+.galItem3 {
+    width: 16%;
+}
+.galItem4 {
+    width: 45%;
+}
+.galItem5 {
+    width: 60%;
+}
+.galItem6 {
+    width: 25%;
+}
+.galItem7 {
+    width: 20%;
+}
+.galItem8 {
+    width: 60%;
+}
+.galItem9 {
+    width: 33%;
+}
+.galItem10 {
+    width: 60%;
+}
+.galItem11 {
+    width: 43%;
+}
+.galItem12 {
+    width: 25%;
+}
+.galItem13 {
+    width: 60%;
+}
+.galItem14 {
+    width: 25%;
+}
+.galItem15 {
+    width: 25%;
+}
+.galItem16 {
+    width: 45%;
+}
+.galItem17 {
+    width: 16%;
+}
+.galItem18 {
+    width: 60%;
+}
