@@ -16,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top left, #190b16, #060815, #190b16);
+    background: linear-gradient(to top left, #190b0b, #060815, #190b0b);
     color: #fff;
     z-index: 9999;
     transition: opacity 1s ease;
@@ -387,6 +387,7 @@ body {
 }
 .back2 {
     position: fixed;
+    background: #190b0b;
     top: 0;
     left: 0;
     width: 100%;
