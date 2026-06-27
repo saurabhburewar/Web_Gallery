@@ -377,7 +377,7 @@ body {
     height: 100%;
     background: radial-gradient(circle at 50% -50%, #ff000070, transparent);
     animation: pulse 8s infinite;
-    z-index: 2;
+    z-index: -2;
     pointer-events: none;
 }
 @keyframes pulse {
@@ -391,7 +391,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
 }
 .backencodes {
@@ -420,7 +420,7 @@ body {
     top: 10%;
     width: 100%;
     height: 80%;
-    z-index: 3;
+    z-index: 1;
     /* perspective: 1000px; */
     display: flex;
     justify-content: center;
